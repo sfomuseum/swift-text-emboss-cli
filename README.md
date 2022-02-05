@@ -10,10 +10,18 @@ Both of the images in these examples are included in the [fixtures](fixtures) di
 
 ```
 $> swift build
+```
 
+![](fixtures/sfomuseum-pin-2019.081.021.jpg)
+
+```
 $> ./.build/debug/text-cli ./fixtures/sfomuseum-pin-2019.081.021.jpg 
 SANDY HERRMANN
+```
 
+![](fixtures/sfomuseum-menu-2000.058.1457.jpg)
+
+```
 $> ./.build/debug/text-cli ./fixtures/sfomuseum-menu-2000.058.1457.jpg 
 GUAM
 WAKE -GUAM
