@@ -16,14 +16,14 @@ Both of the images in these examples are included in the [fixtures](fixtures) di
 $> swift build
 ```
 
-![https://collection.sfomuseum.org/objects/1762939445/](fixtures/sfomuseum-pin-2019.081.021.jpg)
+[![https://collection.sfomuseum.org/objects/1762939445/](fixtures/sfomuseum-pin-2019.081.021.jpg)](https://collection.sfomuseum.org/objects/1762939445/)
 
 ```
 $> ./.build/debug/text-cli ./fixtures/sfomuseum-pin-2019.081.021.jpg 
 SANDY HERRMANN
 ```
 
-![https://collection.sfomuseum.org/objects/1511924565/](fixtures/sfomuseum-menu-2000.058.1457.jpg)
+[![https://collection.sfomuseum.org/objects/1511924565/](fixtures/sfomuseum-menu-2000.058.1457.jpg)](https://collection.sfomuseum.org/objects/1511924565/)
 
 ```
 $> ./.build/debug/text-cli ./fixtures/sfomuseum-menu-2000.058.1457.jpg 
