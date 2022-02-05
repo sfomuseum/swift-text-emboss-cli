@@ -6,6 +6,7 @@ import PackageDescription
 let package = Package(
     name: "text-cli",
     dependencies: [
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.3"),
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
@@ -14,7 +15,9 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .executableTarget(
             name: "text-cli",
-            dependencies: []),
+            dependencies: [
+                .product(name: "ArgumentParser", package: "swift-argument-parser"),
+            ]),
         .testTarget(
             name: "text-cliTests",
             dependencies: ["text-cli"]),
