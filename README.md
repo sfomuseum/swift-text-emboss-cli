@@ -64,8 +64,31 @@ to embark on the final leg of their journey.
 / Cognac
 ```
 
+[![https://collection.sfomuseum.org/objects/1729564805/](fixtures/sfomuseum-clip-2011.058.005.jpg)](https://collection.sfomuseum.org/objects/1729564805/)
+
+```
+$> ./.build/debug/text-cli ./fixtures/sfomuseum-clip-2011.058.005.jpg 
+ABOUT YOUR
+NAPKIN CLIP...
+We designed your napkin so you
+can attach it easily to the neckline
+of your clothes. Before fixing it in
+position, all you need do is push
+the narrow end of this clip
+through the buttonhole in one
+corner of the napkin. (See
+illustrations.)
+QANTAS
+You will find this clip has a
+myriad of personal uses. For
+instance, makes an ideal hanger
+for clothes when hooked at the
+top of a car window.
+```
+
 ## See also
 
 * https://developer.apple.com/documentation/vision
 * https://collection.sfomuseum.org/objects/1762939445/
 * https://collection.sfomuseum.org/objects/1511924565/#1729566967
+* https://collection.sfomuseum.org/objects/1729564805/
