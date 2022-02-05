@@ -2,7 +2,11 @@
 
 Command line tool for extracting text from images using Apple's Vision framework.
 
-_`text-cli` is kind of a dumb name but I didn't actually think I would finish this on the first go. This tool (and package) will probably be renamed._
+_`text-cli` is kind of a dumb name but I didn't actually think I would finish it on the first go and now it's the end of the day. This tool (and package) will probably be renamed._
+
+## Important
+
+This tool requires Mac OS 10.15 or higher.
 
 ## Example
 
@@ -12,14 +16,14 @@ Both of the images in these examples are included in the [fixtures](fixtures) di
 $> swift build
 ```
 
-![](fixtures/sfomuseum-pin-2019.081.021.jpg)
+![https://collection.sfomuseum.org/objects/1762939445/](fixtures/sfomuseum-pin-2019.081.021.jpg)
 
 ```
 $> ./.build/debug/text-cli ./fixtures/sfomuseum-pin-2019.081.021.jpg 
 SANDY HERRMANN
 ```
 
-![](fixtures/sfomuseum-menu-2000.058.1457.jpg)
+![https://collection.sfomuseum.org/objects/1511924565/](fixtures/sfomuseum-menu-2000.058.1457.jpg)
 
 ```
 $> ./.build/debug/text-cli ./fixtures/sfomuseum-menu-2000.058.1457.jpg 
