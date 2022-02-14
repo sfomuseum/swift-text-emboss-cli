@@ -10,7 +10,7 @@ This tool requires Mac OS 10.15 or higher.
 
 ## Example
 
-Both of the images in these examples are included in the [fixtures](fixtures) directory.
+All of the images in these examples are included in the [fixtures](fixtures) directory.
 
 ```
 $> swift build
