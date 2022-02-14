@@ -1,7 +1,7 @@
 import Foundation
 import ArgumentParser
-import Vision
 import AppKit
+import TextEmboss
 
 public enum Errors: Error {
     case notFound
@@ -14,35 +14,8 @@ public enum Errors: Error {
 @available(macOS 10.15, *)
 struct TextExtractCLI: ParsableCommand {
 
-    @Argument(help:"The path to an image file to extract text from")
+    @Argument(help:"The path to an image file to extract text from  ")
     var inputFile: String
-    
-    func processImage(image: CGImage) -> Result<String, Error> {
-                
-        let req = VNRecognizeTextRequest()
-        let handler = VNImageRequestHandler(cgImage: image, options: [:])
-
-        do {
-            try handler.perform([req])
-        } catch {
-            return .failure(error)
-        }
-        
-        var transcript = ""
-
-        if req.results != nil {
-            
-            let maximumCandidates = 1
-            for observation in req.results! {
-                guard let candidate = observation.topCandidates(maximumCandidates).first else { continue }
-                transcript += candidate.string
-                transcript += "\n"
-            }
-        }
-
-        transcript = transcript.trimmingCharacters(in: .whitespacesAndNewlines)
-        return .success(transcript)
-    }
     
     func run() throws {
         
@@ -60,7 +33,8 @@ struct TextExtractCLI: ParsableCommand {
             throw(Errors.cgImage)
         }
         
-        let rsp = processImage(image: cgImage)
+        let te = TextEmboss()
+        let rsp = te.ProcessImage(image: cgImage)
         
         switch rsp {
         case .failure(let error):

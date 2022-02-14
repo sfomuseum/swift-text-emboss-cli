@@ -7,6 +7,8 @@ let package = Package(
     name: "text-cli",
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.3"),
+        .package(url: "https://github.com/sfomuseum/swift-text-emboss", from: "0.0.1"),
+
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
@@ -17,6 +19,7 @@ let package = Package(
             name: "text-cli",
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
+                .product(name: "TextEmboss", package: "swift-text-emboss"),
             ]),
         .testTarget(
             name: "text-cliTests",

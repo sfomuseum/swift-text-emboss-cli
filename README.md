@@ -88,6 +88,7 @@ top of a car window.
 
 ## See also
 
+* https://github.com/sfomuseum/swift-text-emboss
 * https://developer.apple.com/documentation/vision
 * https://collection.sfomuseum.org/objects/1762939445/
 * https://collection.sfomuseum.org/objects/1511924565/#1729566967
