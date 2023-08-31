@@ -1,8 +1,6 @@
-# text-cli
+# swift-text-emboss-cli
 
 Command line tool for extracting text from images using Apple's Vision framework.
-
-_`text-cli` is kind of a dumb name but I didn't actually think I would finish it on the first go and now it's the end of the day. This tool (and package) will probably be renamed._
 
 ## Important
 
@@ -19,14 +17,14 @@ $> swift build
 [![https://collection.sfomuseum.org/objects/1762939445/](fixtures/sfomuseum-pin-2019.081.021.jpg)](https://collection.sfomuseum.org/objects/1762939445/)
 
 ```
-$> ./.build/debug/text-cli ./fixtures/sfomuseum-pin-2019.081.021.jpg 
+$> ./.build/debug/text-emboss ./fixtures/sfomuseum-pin-2019.081.021.jpg 
 SANDY HERRMANN
 ```
 
 [![https://collection.sfomuseum.org/objects/1511924565/](fixtures/sfomuseum-menu-2000.058.1457.jpg)](https://collection.sfomuseum.org/objects/1511924565/)
 
 ```
-$> ./.build/debug/text-cli ./fixtures/sfomuseum-menu-2000.058.1457.jpg 
+$> ./.build/debug/text-emboss ./fixtures/sfomuseum-menu-2000.058.1457.jpg 
 GUAM
 WAKE -GUAM
 LUNCHEON
@@ -67,7 +65,7 @@ to embark on the final leg of their journey.
 [![https://collection.sfomuseum.org/objects/1729564805/](fixtures/sfomuseum-clip-2011.058.005.jpg)](https://collection.sfomuseum.org/objects/1729564805/)
 
 ```
-$> ./.build/debug/text-cli ./fixtures/sfomuseum-clip-2011.058.005.jpg 
+$> ./.build/debug/text-emboss ./fixtures/sfomuseum-clip-2011.058.005.jpg 
 ABOUT YOUR
 NAPKIN CLIP...
 We designed your napkin so you

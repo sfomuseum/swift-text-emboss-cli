@@ -4,9 +4,9 @@
 import PackageDescription
 
 let package = Package(
-    name: "text-cli",
+    name: "text-emboss",
     dependencies: [
-        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.3"),
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.2.0"),
         .package(url: "https://github.com/sfomuseum/swift-text-emboss", from: "0.0.1"),
 
         // Dependencies declare other packages that this package depends on.
@@ -16,13 +16,10 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .executableTarget(
-            name: "text-cli",
+            name: "text-emboss",
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
                 .product(name: "TextEmboss", package: "swift-text-emboss"),
             ]),
-        .testTarget(
-            name: "text-cliTests",
-            dependencies: ["text-cli"]),
     ]
 )
