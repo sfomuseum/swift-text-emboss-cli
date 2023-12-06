@@ -14,8 +14,11 @@ public enum Errors: Error {
 @available(macOS 10.15, *)
 struct TextExtractCLI: ParsableCommand {
 
-    @Argument(help:"The path to an image file to extract text from  ")
+    @Argument(help:"The path to an image file to extract text from.")
     var inputFile: String
+    
+    @Option(help:"Emit the response as a JSON string.")
+    var asJson: Bool = false
     
     func run() throws {
         
@@ -39,8 +42,18 @@ struct TextExtractCLI: ParsableCommand {
         switch rsp {
         case .failure(let error):
             throw(error)
-        case .success(let txt):
-            print(txt)
+        case .success(let rsp):
+            
+            if asJson {
+                
+                    let enc = JSONEncoder()
+                    let data = try enc.encode(rsp)
+                
+                    print(String(data: data, encoding: .utf8)!)
+                
+            } else {
+                print(rsp.text)
+            }
         }
         
     }

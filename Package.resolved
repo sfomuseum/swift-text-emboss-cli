@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/sfomuseum/swift-text-emboss",
         "state": {
           "branch": null,
-          "revision": "ea588c67c5fa0c998d55c3b2fdaa20825700c85b",
-          "version": "0.0.1"
+          "revision": "5dfe63a82ecae91f9461054bf599bc22bd55dc82",
+          "version": "0.0.3"
         }
       }
     ]

@@ -12,6 +12,16 @@ All of the images in these examples are included in the [fixtures](fixtures) dir
 
 ```
 $> swift build
+
+$> ./.build/debug/text-emboss -h
+USAGE: text-extract-cli <input-file> [--as-json <as-json>]
+
+ARGUMENTS:
+  <input-file>            The path to an image file to extract text from.
+
+OPTIONS:
+  --as-json <as-json>     Emit the response as a JSON string. (default: false)
+  -h, --help              Show help information.
 ```
 
 [![https://collection.sfomuseum.org/objects/1762939445/](fixtures/sfomuseum-pin-2019.081.021.jpg)](https://collection.sfomuseum.org/objects/1762939445/)
@@ -83,6 +93,21 @@ instance, makes an ideal hanger
 for clothes when hooked at the
 top of a car window.
 ```
+
+### JSON
+
+The return provenance and creation time for the text extracted from an image pass the `--as-json` flag which will return a JSON-encoded dictionary containing that information.
+
+```
+$> ./.build/debug/text-emboss --as-json true ./fixtures/sfomuseum-pin-2019.081.021.jpg | jq
+{
+  "source": "com.apple.visionkit.VNImageRequestHandler#Version 14.1.2 (Build 23B92)",
+  "text": "SANDY HERRMANN",
+  "created": 1701891195
+}
+```
+
+Note: The `source` key is an arbitrary string used to identify the processes, or models, from which image text was derived. As of this writing this string has no standard formatting or requirements. If and when those conventions are established this package will be updated to use them.
 
 ## See also
 
