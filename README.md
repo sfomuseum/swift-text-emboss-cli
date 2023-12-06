@@ -2,9 +2,9 @@
 
 Command line tool for extracting text from images using Apple's Vision framework.
 
-## Important
+## Background
 
-This tool requires Mac OS 10.15 or higher.
+For background, please see the [Searching Text in Images on the Aviation Collection Website](https://millsfield.sfomuseum.org/blog/2023/09/14/image-text-search/) blog post.
 
 ## Example
 
@@ -108,6 +108,10 @@ $> ./.build/debug/text-emboss --as-json true ./fixtures/sfomuseum-pin-2019.081.0
 ```
 
 Note: The `source` key is an arbitrary string used to identify the processes, or models, from which image text was derived. As of this writing this string has no standard formatting or requirements. If and when those conventions are established this package will be updated to use them.
+
+## Requirements
+
+This tool requires Mac OS 10.15 or higher.
 
 ## See also
 
